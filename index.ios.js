@@ -12,7 +12,10 @@ import PostPreview from './src/PostPreview.js';
 import PostView from './src/PostView.js';
 import SignIn from './src/SignIn.js';
 import HomeScreen from './HomeScreen.js';
+import { createStore } from 'redux';
+import reducer from './src/reducers';
 
+const store = createStore((state = [], action = {}) => state);
 
 const AwesomeProject = StackNavigator({
   Home: { screen: HomeScreen },
