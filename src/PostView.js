@@ -4,7 +4,7 @@ import { AppRegistry, Text, TextInput, View } from 'react-native';
 export default class PostView extends Component {
   constructor(props) {
     super(props);
-    this.state = {text: ''};
+    // this.state = {text: ''};
   }
 
   render() {

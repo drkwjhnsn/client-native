@@ -13,19 +13,41 @@ import PostView from './src/PostView.js';
 import SignIn from './src/SignIn.js';
 import HomeScreen from './HomeScreen.js';
 import { createStore } from 'redux';
-import reducer from './src/reducers';
+import topReducer from './src/reducers/index.js';
+import { sampleStore } from './scratchpad.js';
 
-const store = createStore((state = [], action = {}) => state);
+const store = createStore((state = sampleStore, action) => state);
 
-const AwesomeProject = StackNavigator({
-  Home: { screen: HomeScreen },
-  Settings: { screen: Settings },
-  AdminSettings: { screen: AdminSettings },
-  UserSettings: { screen: UserSettings },
-  PostView: { screen: PostView },
-  SignIn: { screen: SignIn },
-  CreatePosts: { screen: CreatePosts },
-});
+class AwesomeProject extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <ScrollView>
+        <Settings />
+        <ModalBar />
+        <CreatePosts />
+        <PostList />
+        <PostPreview />
+        <PostView />
+        <SignIn />
+        <HomeScreen />
+      </ScrollView>
+    );
+  }
+}
+
+// const AwesomeProject = StackNavigator({
+//   Home: { screen: HomeScreen },
+//   Settings: { screen: Settings },
+//   AdminSettings: { screen: AdminSettings },
+//   UserSettings: { screen: UserSettings },
+//   PostView: { screen: PostView },
+//   SignIn: { screen: SignIn },
+//   CreatePosts: { screen: CreatePosts },
+// });
 
 
 AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
