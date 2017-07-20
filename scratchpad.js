@@ -51,7 +51,14 @@ const sampleStore = {
   user: {
     user_id: 1,
     username: "radDad69",
-    snooze: false
+    snooze: false,
+    subscriptions: [
+      "Leftovers",
+      "Local",
+      "Cats",
+      "Space",
+      "Eggs"
+    ],
   },
   subreddit: {
     id: 1,
@@ -119,7 +126,7 @@ const createUpvoteData = {
 
 // get Posts by subreddit
 
-export {sampleStore};
+export default sampleStore;
 
 // get notifications by id
 

@@ -1,17 +1,22 @@
 import React from 'react';
-import { StyleSheet, Text, ScrollView, Button } from 'react-native';
+import { StyleSheet, Text, ScrollView, Button, FlatList } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 import UserSettings from './UserSettings.js';
 import AdminSettings from './AdminSettings.js';
 
+import data from '../../../scratchpad.js';
+
 export default class Settings extends React.Component {
+
+  // settings axios calls
+
   render() {
     return (
       <ScrollView>
         <Text>Settings!!!</Text>
-        <UserSettings />
-        <AdminSettings />
+        <FlatList data={['a']} renderItem={item => <AdminSettings />} />
+        <FlatList data={['b']} renderItem={item => <UserSettings />} />
       </ScrollView>
     );
   }
