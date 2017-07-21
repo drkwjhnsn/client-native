@@ -33,8 +33,8 @@ export default class HomeScreen extends React.Component {
           data={posts}
           renderItem={({item}) => {
             return (
-            <TouchableOpacity>
-              <PostPreview key={item.id} text={item.text} title={item.title} upvotes={item.upvotes} />
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('PostView', {title: item.title, text: item.text})}>
+              <PostPreview title={item.title} upvotes={item.upvotes} />
             </TouchableOpacity>
             )}
           }
@@ -47,7 +47,7 @@ export default class HomeScreen extends React.Component {
 
 const styles = StyleSheet.create({
   navBar: {
-    height: 80,
+    height: 100,
     paddingTop: 15,
     // paddingHorizontal: 10,
     borderColor: '#AAAAAA',

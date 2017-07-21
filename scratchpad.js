@@ -22,7 +22,7 @@ const fakeMessage1 = {
     timestamp:1500154759479.4531
   },
   subreddit_id: null,
-  upvotes: 0
+  upvotes: 3234
 };
 
 const fakeMessage2 = {
@@ -44,7 +44,7 @@ const fakeMessage2 = {
     timestamp:1500154759479.4531
   },
   subreddit_id: null,
-  upvotes: 0
+  upvotes: 5634
 }
 
 const sampleStore = {

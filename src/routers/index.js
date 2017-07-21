@@ -23,6 +23,9 @@ const Drawer = DrawerNavigator({
   CreatePost: {
     screen: CreatePost,
   },
+  PostView: {
+    screen: PostView,
+  }
 });
 
 
